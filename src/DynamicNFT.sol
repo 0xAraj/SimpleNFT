@@ -6,7 +6,7 @@ import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
 
-contract SimpleNFT is ERC721 {
+contract DynamicNFT is ERC721 {
     uint256 s_nftCounter;
     using Strings for uint256;
 
@@ -22,7 +22,7 @@ contract SimpleNFT is ERC721 {
     constructor(
         string memory happySvgUri,
         string memory sadSvgUri
-    ) ERC721("SimpleNFT", "SNFT") {
+    ) ERC721("DynamicNFT", "DNFT") {
         s_nftCounter = 0;
         HAPPY_SVG_URI = happySvgUri;
         SAD_SVG_URI = sadSvgUri;
